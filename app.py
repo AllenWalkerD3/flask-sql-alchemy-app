@@ -1,11 +1,11 @@
-from flask import Flask, current_app
+from flask import Flask
 from flask_jwt import JWT
 from flask_restful import Api
 
 from database import db
-from resources.user import UserRegister
-from resources.item import Item, ItemList
-from resources.store import Store, StoreList 
+from src.resources.user import UserRegister
+from src.resources.item import Item, ItemList
+from src.resources.store import Store, StoreList 
 from security import authenticate, identity
 
 app = Flask(__name__)
