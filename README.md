@@ -3,7 +3,6 @@
 ## Installation
 
 ```
-run
 make install
 make run 
 ```
