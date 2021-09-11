@@ -3,20 +3,23 @@ from flask_jwt import JWT
 from flask_restful import Api
 
 from database import db
-from resources.user import UserRegister
-from resources.item import Item, ItemList
-from resources.store import Store, StoreList 
-from security import authenticate, identity
+from src.resources.user import UserRegister
+from src.resources.item import Item, ItemList
+from src.resources.store import Store, StoreList 
+from src.security import authenticate, identity
 
-app = Flask(__name__)
+from src import *
+
+# app = Flask(__name__)
+app = create_app()
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_key = "secret_key"
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 jwt = JWT(app, authenticate, identity)  # /auth
 

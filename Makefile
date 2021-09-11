@@ -6,7 +6,7 @@ dist_dir := $(CURDIR)/dist
 PYTHONPATH += $(source_dir)
 ENV_NAME ?= env
 PIPENV_PACKAGE ?=
-make_env = python3 -m venv $(ENV_NAME)
+make_env = python3.8 -m venv $(ENV_NAME)
 # make_env = pipenv install $(PIPENV_PACKAGE)
 env_dir = $(CURDIR)/$(ENV_NAME)
 bin_dir = $(env_dir)/bin
@@ -35,7 +35,7 @@ install: env
 run:
 	PYTHONPATH=$(PYTHONPATH) 					\
 	$(CONFIG_VARIABLE_NAME)=$(CONFIG_FILENAME)	\
-	$(bin_dir)/python app.py
+	$(bin_dir)/python wsgi_app.py
 
 .PHONY: create_table
 create_table:
