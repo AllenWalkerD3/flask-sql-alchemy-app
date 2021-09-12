@@ -5,6 +5,9 @@
 *$py.class
 .vscode
 .DS_Store
+node_modules/
+.serverless/
+
 
 # C extensions
 *.so
