@@ -37,6 +37,12 @@ run:
 	$(CONFIG_VARIABLE_NAME)=$(CONFIG_FILENAME)	\
 	$(bin_dir)/python app.py
 
+.PHONY: serve
+serve:
+	PYTHONPATH=$(PYTHONPATH) 					\
+	$(CONFIG_VARIABLE_NAME)=$(CONFIG_FILENAME)	\
+	${activate_env} && sls wsgi serve
+
 .PHONY: create_table
 create_table:
 	PYTHONPATH=$(PYTHONPATH) 					\
