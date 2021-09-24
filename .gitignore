@@ -1,11 +1,13 @@
 # Byte-compiled / optimized / DLL files
 *__pycache__/
+*models/__pycache__/
 *.py[cod]
 *.pyc
 *$py.class
 .vscode
 .DS_Store
-
+node_modules/
+.serverless/
 # C extensions
 *.so
 

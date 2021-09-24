@@ -2,7 +2,7 @@
 from flask import current_app
 from flask_jwt import jwt_required
 from flask_restful import Resource, reqparse
-from models.item import ItemModel
+from models import ItemModel
 
 
 class Item(Resource):
