@@ -16,3 +16,7 @@ This project uses sqlite for data storage and uses sql alchemy for database mapp
 ## Implementation
 
 This project is implemented using Flask, and is REST API for a store
+
+## Reference
+
+https://docs.graphene-python.org/projects/sqlalchemy/en/latest/tutorial/
